@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: fit-content;
+    background-color: #FBF9EB;
+}
+.fixbar {
+    max-height: 30px;
+    max-width: 100%;
+    background-color: #2A2857;
+    color: white;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    animation: fixbar 0.3s ease-in;
+
+}
+
+@keyframes fixbar{
+    from{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+     to{
+        opacity: 1;
+        transform: translateY(0);
+     }
+}
+
+.fixbar p {
+    margin: 0;
+}
+
+nav {
+    max-width: 1400px;
+    width: 95%;
+
+    position: fixed;
+    top: 30px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 20px;
+
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    z-index: 100;
+    animation: navLoad 0.4s ease-out forwards;
+
+    transition:
+        width 0.5s ease,
+        top 0.5s ease,
+        border-radius 0.5s ease;
+
+}
+
+@keyframes navLoad {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* Scroll ke baad */
+nav.nav-scrolled {
+    width: 100%;
+    top: 0;
+    border-radius: 0;
+}
+
+
+/* Left */
+.logo-text {
+    display: flex;
+    align-items: center;
+    font-family: "Figtree", sans-serif;
+
+    
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin-right: 10px;
+    padding: 5px;
+    font-family: 'rackless';
+
+}
+
+
+/* Center logo */
+.logo-text1 {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text1 a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0;
+    font-family: "Times New Roman", serif;
+    font-size: 20px;
+    line-height: 10px;
+}
+
+
+/* Right */
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Icons */
+.header-icon,
+.search-icon {
+    font-size: 18px;
+    margin-left: 15px;
+    cursor: pointer;
+}
